@@ -15,6 +15,8 @@ const Weather = () => {
 
     const [weatherData, setWeatherData] = useState(false);
 
+    // const [weat, setWeat] = useState({});
+
     const allIcons = {
         "01d": clear_icon,
         "01n": clear_icon,
@@ -71,7 +73,9 @@ const Weather = () => {
     // }, [])
 
     return (
-        <div className='weather'>
+        // <div className='weather'>
+        <div className={(typeof weatherData.temperature != "undefined") ? ((weatherData.temperature > 16) ? 'weatherWarm' : 'weather') : 'weather'}> 
+            
             <div className='search-bar'>
                 <input
                     ref={inputRef}
@@ -110,7 +114,7 @@ const Weather = () => {
                     </div>
                 </div>
             </> : <></>}
-
+            
         </div>
     )
 }
