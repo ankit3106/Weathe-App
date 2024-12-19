@@ -21,7 +21,6 @@ const Weather = () => {
         "01d": clear_icon,
         "01n": clear_icon,
         "02d": cloud_icon,
-        "02d": cloud_icon,
         "02n": cloud_icon,
         "03d": cloud_icon,
         "03n": cloud_icon,
